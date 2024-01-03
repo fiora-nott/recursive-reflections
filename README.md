@@ -8,7 +8,22 @@
 **Time Spent :** ~14 days  
 
 ## Summary
-This project is a C++ application which renders a static grid of voxels using the OpenGL rendering pipeline. During testing, I have managed to render 32,768,000 voxels at a crisp framerate. To achieve this, multiple optimizations have been made. Each voxel is stored as a 16-bit short, enumerated as a "Block", and held within a "Chunk" under a "World". These abstractions allow modular memory management and a wide range of possible scene sizes. By iterating over every block and comparing neighbors, we can generate a mesh of triangles for every visible surface in the scene. Additional calculation is done to determine where shadows should be placed in between edges (voxel-space ambient occlusion) and to determine light levels. This mesh data is bitpacked and sent to a shader that parses bitwise position and lighting data, then applies a texture using that information. Additional matrix math (via GLM) is done to create a player camera that can explore the scene. This is all converted into OpenGL-compatible buffer objects and rasterized on a GLFW window.
+This project is a voxel raymarcher with recursive reflections. It is written in HLSL and presented using the Unity game engine. To start, there is a Unity camera in the scene. Its transformation is modified with mouse and keyboard input using a C# script. A second script overwrites the camera's blit operation. Each time the screen is drawn, the user settings are updated (reflection count, world color, etc). A third script carries the voxels in memory 32-bit RGBA values, subdivided as chunks and copied into compute buffers. For demonstration purposes, there is a perlin noise function and a random-value setting when populating the voxel memory. All of the information in these scripts is passed into the shader as uniforms or buffers. The shader runs for each pixel of the screen, instantiating rays at the camera position. Perspective is applied to each ray based on the pixel's screen position. This simulates a camera frustrum. All rays are now calculated concurrently on the GPU. Each ray does the following: 
+
+1) Geometrically calculate where it intersects with the global volume of chunks.
+2) Step forward to the intersection with world bounds or return a mask if no intersection occurs.
+3) Pass the ray position and direction into the Raymarch function.
+4) The Raymarch function procedurally steps the ray position forward using the Digital Differential Analyzer algorithm (DDA).
+5) DDA steps in block-wise space by hitting the next-closest axis, determined by the ray's direction.
+6) Once a solid block (determined by the alpha channel) is hit, return the block's RGB value with a dot-product shadow applied.
+7) The raymarch result is added to a running color sum. If reflections are off, the algorithm ends here with an opaque output.
+8) If reflections are on and a hit was successful, the raymarch function is recursively called and its results are added to the color sum.
+9) These recursive calls use the previous hit's data to instantiate a new ray at a reflected angle determined by the hit's normal.
+10) The final color sum is applied to the corresponding screen-buffer pixel and returned for drawing.
+
+The result is blazingly fast because the DDA algorithm is extremely efficient at traversing dense voxel space. DDA only requires comparing the ratio between similar triangles. Once a block is hit, locating it in memory only takes O(n) time. This is because the block buffer is flattened into a 1d array. The buffer is organized by chunk strides in XYZ space, then their given blocks in XYZ space. This is similar to a z-order curve.
+
+The final result is an algorithm that can render a complicated volume of 134,217,728 voxels with a maximum of 10 reflections at a speed of 60-90 fps. 
 
 ## Takeaways
 - C++ memory management requires extremely careful deconstruction, abstraction, and standard library wrappers  
