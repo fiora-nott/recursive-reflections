@@ -51,7 +51,7 @@ Compilation of the creation process with bloopers:
 
 
 
-![screenshot 0](Screenshots/screenshot0.png)
+![screenshot 0](Screenshots/mountain.gif)
 
 ---
 
