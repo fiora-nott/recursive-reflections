@@ -105,12 +105,6 @@ Let's go back to the mountain scene. Up close, you can see reflections maintain 
 
 ---
 
-Entire structures can be seen in their fragmented form.
-
-<img src="Screenshots/screenshot3.png" width="50%" height="auto"/>
-
----
-
 Viewing up from a ravine creates a stunning "rainbow sherbert" effect.
 
 <img src="Screenshots/screenshot10.png" width="50%" height="auto"/>
