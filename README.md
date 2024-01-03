@@ -55,9 +55,11 @@ This is the peak performance of the renderer. Each block's color is calculated i
 
 ---
 
-Here is an example of recursive reflections. Two hills are repeatedly reflecting to one another, creating inception.
+Here are some example of recursive reflections. Two hills are repeatedly reflecting to one another, creating inception.
 
 <img src="Screenshots/mountain.gif" width="50%" height="auto"/>
+<img src="Screenshots/screenshot0.png" width="50%" height="auto"/>
+<img src="Screenshots/screenshot1.png" width="50%" height="auto"/>
 
 ---
 
@@ -105,7 +107,7 @@ Let's go back to the mountain scene. Up close, you can see reflections maintain 
 
 ---
 
-Viewing up from a ravine creates a stunning "rainbow sherbert" effect.
+Viewing up from this ravine creates a stunning "rainbow sherbert" effect.
 
 <img src="Screenshots/screenshot10.png" width="50%" height="auto"/>
 
