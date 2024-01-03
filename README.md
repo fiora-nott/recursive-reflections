@@ -26,12 +26,12 @@ The result is blazingly fast because the DDA algorithm is extremely efficient at
 The final result is an algorithm that can render a complicated volume of 134,217,728 voxels with up to 10 reflections at a speed of 60-90 fps. 
 
 ## Takeaways
-- C++ memory management requires extremely careful deconstruction, abstraction, and standard library wrappers  
-- Templates are a tempting tool but ultimately make code hard to predict  
-- Building my own variable types can reduce bloat immensely in high-level functions  
-- OpenGL's reputation as an aging framework is due to frustrating boilerplate and egregious debugging tools  
-- File organization is key because of the surplus header files generated in C++  
-- Macros can be a powerful experimentation tool, but need to be used sparingly  
+- Function parameters can become extremely complicated in HLSL if you do not abstract your variables
+- DDA for voxels can introduce severe artifacts. Stepping in block-space prevents gaps forming at edges/corners
+- Raymarching requires enormous video memory if you want O(n) block accesses
+- Debugging visual glitches in a mature shader requires an intense and thorough process, often with creative color coding
+- Instead of using HLSL to draft, plan out all of the expected behaviour on paper before writing code
+- Reflections past 2-3 begin losing coherence and introducing noise. Refraction or blurring may solve this
 
 ## Video Montage
 
