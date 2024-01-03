@@ -49,34 +49,52 @@ Compilation of the creation process with bloopers:
 
 ## Screenshots
 
+Here is an example of recursive reflections. Two hills are repeatedly reflecting to one another, creating inception.
 
-
-![screenshot 0](Screenshots/mountain.gif)
-
----
-
-
-![screenshot 0](Screenshots/screenshot0.png)
+<img src="Screenshots/mountain.gif" width="50%" height="auto"/>
 
 ---
 
+This is the raw version of the random noise scene. There is no shading, only opaque, flat color.
 
-![screenshot 0](Screenshots/screenshot0.png)
-
----
-
-
-![screenshot 0](Screenshots/screenshot0.png)
+<img src="Screenshots/screenshot8.png" width="50%" height="auto"/>
 
 ---
 
+This is the same scene but with dot product shadows.
 
-![screenshot 0](Screenshots/screenshot0.png)
+<img src="Screenshots/screenshot9.png" width="50%" height="auto"/>
 
 ---
 
+This is after reflections are turned on to 1.
 
-![screenshot 0](Screenshots/screenshot0.png)
+<img src="Screenshots/screenshot7.png" width="50%" height="auto"/>
+
+
+---
+
+This is after reflections are turned up to 100. You can see the noise generated makes the scene incomprehensible.
+
+<img src="Screenshots/screenshot4.png" width="50%" height="auto"/>
+
+---
+
+If the block's are all considered pure black, you can see only the cases where a ray reflects into the skybox.
+
+<img src="Screenshots/screenshot6.png" width="50%" height="auto"/>
+
+---
+
+Up close, you can see reflections maintain crisp edges.
+
+<img src="Screenshots/screenshot12.png" width="50%" height="auto"/>
+
+---
+
+Entire structures can be seen in their fragmented form.
+
+<img src="Screenshots/screenshot3.png" width="50%" height="auto"/>
 
 ## Code Highlights
 
