@@ -49,9 +49,21 @@ Compilation of the creation process with bloopers:
 
 ## Screenshots
 
+This is the peak performance of the renderer. Each block's color is calculated in the noise function.
+
+<img src="Screenshots/screenshot16.png" width="50%" height="auto"/>
+
+---
+
 Here is an example of recursive reflections. Two hills are repeatedly reflecting to one another, creating inception.
 
 <img src="Screenshots/mountain.gif" width="50%" height="auto"/>
+
+---
+
+When viewing the edge of the world, you can see how the sky's colors are additively blended onto the ground.
+
+<img src="Screenshots/screenshot2.png" width="50%" height="auto"/>
 
 ---
 
@@ -74,19 +86,20 @@ This is after reflections are turned on to 1.
 
 ---
 
-This is after reflections are turned up to 100. You can see the noise generated makes the scene incomprehensible.
+This is after reflections are turned up to 100. You can see the noise generated makes the scene incomprehensible.  
+If you look closely on the left, you can see this entire screenshot is actually one block face closeup!  
 
 <img src="Screenshots/screenshot4.png" width="50%" height="auto"/>
 
 ---
 
-If the block's are all considered pure black, you can see only the cases where a ray reflects into the skybox.
+If all blocks are colored with a black albedo, you can see only the cases where a ray reflects into the skybox.
 
 <img src="Screenshots/screenshot6.png" width="50%" height="auto"/>
 
 ---
 
-Up close, you can see reflections maintain crisp edges.
+Let's go back to the mountain scene. Up close, you can see reflections maintain crisp edges.
 
 <img src="Screenshots/screenshot12.png" width="50%" height="auto"/>
 
@@ -95,6 +108,20 @@ Up close, you can see reflections maintain crisp edges.
 Entire structures can be seen in their fragmented form.
 
 <img src="Screenshots/screenshot3.png" width="50%" height="auto"/>
+
+---
+
+Viewing up from a ravine creates a stunning "rainbow sherbert" effect.
+
+<img src="Screenshots/screenshot10.png" width="50%" height="auto"/>
+
+---
+
+Using white blocks with shadows makes the entire scene appear as one big mirror.
+Image one is without shadows, image two is with shadows.
+
+<img src="Screenshots/screenshot14.png" width="50%" height="auto"/>
+<img src="Screenshots/screenshot15.png" width="50%" height="auto"/>
 
 ## Code Highlights
 
