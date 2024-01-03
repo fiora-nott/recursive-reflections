@@ -112,9 +112,7 @@ Viewing up from a ravine creates a stunning "rainbow sherbert" effect.
 ---
 
 Using white blocks with shadows makes the entire scene appear as one big mirror.
-Image one is without shadows, image two is with shadows.
 
-<img src="Screenshots/screenshot14.png" width="50%" height="auto"/>
 <img src="Screenshots/screenshot15.png" width="50%" height="auto"/>
 
 ## Code Highlights
