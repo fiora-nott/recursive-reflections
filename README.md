@@ -2,7 +2,7 @@
 **Date :** June 2023  
 **Languages :** HLSL, C#  
 **Libraries :**  Unity Compute Shaders  
-**IDE :**  Unity Game Engine  
+**IDE :**  Unity Game Engine 2021.3.7f1, Visual Studio  
 **Purpose :**  Hobby/Learning  
 **Learning Sources :**  Sebastian Lague's Raytracing, Voxelbee Devlogs, DDA Algorithm  
 **Time Spent :** ~14 days  
