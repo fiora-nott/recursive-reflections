@@ -1,0 +1,457 @@
+#pragma kernel CSMain
+
+// Screen pixel buffer
+RWTexture2D<float4> Result;
+// Render texture dimensions
+float ScreenResolutionX;
+float ScreenResolutionY;
+
+// Vectors determining camera transformation
+float3 CameraPosition;
+float3 CameraForward;
+float3 CameraRight;
+float3 CameraUp;
+
+// All voxels in the scene
+StructuredBuffer<int> BlockBuffer;
+// Pointers to chunk partitions in the blockBuffer
+StructuredBuffer<int> ChunkBuffer;
+
+// World dimensions as chunk bounds * chunk size
+int ChunkDomain;
+int ChunkSize;
+
+// Real-time editor settings
+int MaxReflects;
+int ShadowsOn;
+int OverwriteColor;
+float4 OverwriteValue;
+texture2D BlockTexture;
+SamplerState samplerBlockTexture;
+float TextureDownscale;
+
+int BlockTextureOn;
+
+// Returns true if a chunk is within valid bounds of chunk-coordinate space
+bool ChunkInBounds(int3 chunkPosition) {
+    return (
+        chunkPosition.x >= 0 &&
+        chunkPosition.y >= 0 &&
+        chunkPosition.z >= 0 &&
+        chunkPosition.x < ChunkDomain &&
+        chunkPosition.y < ChunkDomain &&
+        chunkPosition.z < ChunkDomain);
+}
+
+// Get the block-buffer index of a chunk by accessing the chunkpointer array
+int GetChunk(int3 chunkPos) {
+    return ChunkBuffer[chunkPos.z + ChunkDomain * (chunkPos.y + chunkPos.x * ChunkDomain)];
+}
+
+// Returns true if a local block position is inside of a chunk's boundaries
+bool BlockInBounds(int3 blockPos) {
+    return (
+        blockPos.x >= 0 &&
+        blockPos.y >= 0 &&
+        blockPos.z >= 0 &&
+        blockPos.x < ChunkSize &&
+        blockPos.y < ChunkSize &&
+        blockPos.z < ChunkSize);
+}
+
+// Returns true if a world position is contained within any chunk
+bool PositionInBounds(int3 worldPos) {
+    return (
+        worldPos.x >= 0 &&
+        worldPos.y >= 0 &&
+        worldPos.z >= 0 &&
+        worldPos.x < ChunkSize * ChunkDomain &&
+        worldPos.y < ChunkSize * ChunkDomain &&
+        worldPos.z < ChunkSize * ChunkDomain);
+}
+
+// Index the block buffer using the chunk coordinate and bllock coordinate
+float4 GetBlock(int3 blockPos, int3 chunkPos) {
+    // Convert the local block position into a local block index
+    int indexBlock = (int)(blockPos.z + ChunkSize * (blockPos.y + blockPos.x * ChunkSize));
+    // Get the start index for a chunk in the total block buffer
+    int indexChunk = GetChunk(chunkPos);
+    // Apply chunk z-ordering, then block z-ordering
+    int indexReal = indexBlock + indexChunk;
+    // Retrieve an RGBA value as an int
+    int blockValue = BlockBuffer[indexReal];
+    // Parse each byte into a seperate channel
+    int a = (blockValue >> 0) & 0xFF;
+    int b = (blockValue >> 8) & 0xFF;
+    int g = (blockValue >> 16) & 0xFF;
+    int r = (blockValue >> 24) & 0xFF;
+    // Convert these values to floats in the 0 to 1 color space
+    return float4(r, g, b, a) / 255;
+}
+
+// Digital Differential Analyzer algorithm
+// Projects a ray into a block and calculates the escape face. Returns neighbor block
+int3 DDA_OneUnit(float3 rayOrigin, float3 rayDir, int3 blockPos) {
+    // Note where 0 axes are to avoid divide by zero errors
+    bool3 valid = bool3(
+        rayDir.x != 0,
+        rayDir.y != 0,
+        rayDir.z != 0
+        );
+
+    // Distance records the difference of the origin and destination plane (x2 - x1)
+    float3 distance = float3(0, 0, 0);
+    // Magnitude records the ratio of the projected vector to our base vector
+    // Each value represents the hypotenuse of a stretched similar triangle
+    float3 mag = float3(0, 0, 0);
+
+    // For each axis, only calculate if the direction has a non-zero value and reach this axis eventually
+    if (valid.x) {
+        // If our direction is positive, we will be escaping through the positive plane (pos + 1)
+        if (rayDir.x > 0)
+            distance.x = blockPos.x + 1 - rayOrigin.x;
+        // Otherwise, we will be going to the negative bounds (pos)
+        else
+            distance.x = blockPos.x - rayOrigin.x;
+        // The total magnitude required to stretch our x value to the destination. 
+        mag.x = distance.x / rayDir.x;
+    }
+    if (valid.y) {
+        if (rayDir.y > 0)
+            distance.y = blockPos.y + 1 - rayOrigin.y;
+        else
+            distance.y = blockPos.y - rayOrigin.y;
+        mag.y = distance.y / rayDir.y;
+    }
+    if (valid.z) {
+        if (rayDir.z > 0)
+            distance.z = blockPos.z + 1 - rayOrigin.z;
+        else
+            distance.z = blockPos.z - rayOrigin.z;
+        mag.z = distance.z / rayDir.z;
+    }
+
+    // Use conditionals to ignore axes where magnitude=0 is due to divide by zero errors
+    // We do this to dilineate because 0 can ALSO represent being directly on top of our destination
+    if (valid.x && mag.x <= mag.y && mag.x <= mag.z) {
+        // Step through exactly one unit at a time. This prevents edge and corner artifacts
+        // The traditional approach is vector math to advance forward, but that is slow
+        // and introduces a plethora of float precision errors that are devastating
+        return blockPos + int3(sign(rayDir.x), 0, 0);
+    }
+    else if (valid.y && mag.y <= mag.z) {
+        return blockPos + int3(0, sign(rayDir.y), 0);
+    }
+    else {
+        return blockPos + int3(0, 0, sign(rayDir.z));
+    }
+}
+
+// Find where a ray intersects a cubic volume using DDA, and return the normal based off which axis was used
+float3 FindEntryPoint(float3 rayOrigin, float3 rayDir, int3 blockPos, out int3 normal) {
+    // Note where 0 axes are to avoid divide by zero errors
+    bool3 valid = bool3(
+        rayDir.x != 0,
+        rayDir.y != 0,
+        rayDir.z != 0
+        );
+
+    // Distance records the difference of the origin and destination plane (x2 - x1)
+    float3 distance = float3(0, 0, 0);
+    // Magnitude records the ratio of the projected vector to our base vector
+    // Each value represents the hypotenuse of a stretched similar triangle
+    float3 mag = float3(0, 0, 0);
+
+    // For each axis, only consider it if it has a non-zero value and reach any axis eventually
+    if (valid.x) {
+        // If our direction is positive, we will be hitting the X- facing plane.
+        if (rayDir.x > 0)
+            distance.x = blockPos.x - rayOrigin.x;
+        // A negative direction means we hit the position bound, which requires displacing the base plane by the blocks width (1)
+        else
+            distance.x = blockPos.x + 1 - rayOrigin.x;
+        // The total magnitude required to stretch our x value to the destination. 
+        mag.x = distance.x / rayDir.x;
+    }
+    if (valid.y) {
+        if (rayDir.y > 0)
+            distance.y = blockPos.y - rayOrigin.y;
+        else
+            distance.y = blockPos.y + 1 - rayOrigin.y;
+        mag.y = distance.y / rayDir.y;
+    }
+    if (valid.z) {
+        if (rayDir.z > 0)
+            distance.z = blockPos.z - rayOrigin.z;
+        else
+            distance.z = blockPos.z + 1 - rayOrigin.z;
+        mag.z = distance.z / rayDir.z;
+    }
+
+    // Use conditionals to ignore axes where magnitude=0 is due to divide by zero errors
+    // We do this to dilineate because 0 can ALSO represent being directly on top of our destination
+    if (valid.x && mag.x >= mag.y && mag.x >= mag.z) {
+        // Our normal is the cross product for the plane hit, reflected
+        normal = int3(-sign(rayDir.x), 0, 0);
+        // Move the origin forward to get the exact intersection point
+        return rayOrigin + rayDir * mag.x;
+    }
+    else if (valid.y && mag.y >= mag.z) {
+        normal = int3(0, -sign(rayDir.y), 0);
+        return rayOrigin + rayDir * mag.y;
+    }
+    else {
+        normal = int3(0, 0, -sign(rayDir.z));
+        return rayOrigin + rayDir * mag.z;
+    }
+}
+
+// Simulate a skybox by having vector direction uniquely sample a gradient
+float4 CalculateSkyColor(float3 rayDir) {
+    float4 skyColor;
+    skyColor = float4(0.7, 0.9, 1.0, 1.0) / 2 + float4(rayDir.x, rayDir.y, 0.0, 1.0) / 2;
+    //skyColor = float4(0.7, 0.8, 1.0, 1.0);
+    //skyColor.r = -rayDir.z;
+    //skyColor.g = abs(rayDir.x);
+    //skyColor.b = rayDir.z;
+    //skyColor.r = clamp(skyColor.rw, 0.6, 1.0);
+    //skyColor.g = clamp(skyColor.g, 0.4, 0.7);
+    //skyColor.b = clamp(skyColor.b, 0.5, 0.9);
+    return skyColor;
+}
+
+// Continually step a blockposition using DDA until a block is hit, then return hit values including albedo/texture
+bool RayMarch(float3 rayOrigin, float3 rayDir, out float3 hitPoint, out float3 hitReflection, out float4 hitColor) {
+
+    // Worldpos represents a cartesian coordinate value
+    int3 worldPos = floor(rayOrigin);
+    // Chunkpos represents a chunkwise coordinate where 1 unit represents 1 chunk's width 
+    int3 chunkPos;
+    // Blockpos represents which local block coordinate the worldpos inhabits.
+    // This will be in a range of (0, chunkSize-1) inclusive. This is required for flattened array indexing 
+    int3 blockPos;
+
+    // Limit iterations of raystepping to avoid infinite loops or impossibly large world traversal
+    int steps = 0;
+    while (steps < 2000) {
+        steps++;
+        
+        // Advance the world position because it is in the same coordinate system as rayOrigin and Direction
+        worldPos = DDA_OneUnit(rayOrigin, rayDir, worldPos);
+        // Derive the chunkspace coordinate and blockspace coordinate for indexing arrays
+        chunkPos = floor(worldPos / ChunkSize);
+        blockPos = floor(worldPos) - chunkPos * ChunkSize;
+
+        if (!PositionInBounds(worldPos)) {
+            // Calculate the sky color for every ray - even reflections
+            // This means the sky color itself can be carried through reflections
+            hitColor = CalculateSkyColor(rayDir);
+            return false;
+        }
+
+        // Sample our block memory to get an RGBA value!
+        float4 blockColor = GetBlock(blockPos, chunkPos);
+
+        // The alpha channel determines whether or not a block is solid
+        if (blockColor.a > 0.5) {
+            // Our calling script may want to overwrite block colors and textures
+            if (OverwriteColor == 1) {
+                blockColor = OverwriteValue;
+            }
+
+            // Simple dot product shadows can be applied depending on which planar normal we hit
+            if (ShadowsOn == 1) {
+                float shadow = 1;
+                float3 uvNormal;
+                float3 UVhit = FindEntryPoint(rayOrigin, rayDir, worldPos, uvNormal);
+
+                // Use our UV intersection to sample a blocktexture
+                if (BlockTextureOn) {
+                    float2 UV;
+                    // For horizontal faces
+                    if (uvNormal.y == 0) {
+                        // Y is always the vertical
+                        UV.y = UVhit.y - worldPos.y;
+                        // For z-faces, x is the cross product
+                        if (uvNormal.z != 0)
+                            UV.x = UVhit.x - worldPos.x;
+                        // For x-faces, z is the cross product
+                        else
+                            UV.x = UVhit.z - worldPos.z;
+                    }
+                    else {
+                        // for y-faces, use horizontals as UV
+                        UV.x = UVhit.x - worldPos.x;
+                        UV.y = UVhit.z - worldPos.z;
+                    }
+                    blockColor = BlockTexture.SampleLevel(samplerBlockTexture, UV * TextureDownscale, 0);
+                    // If we hit a transparent pixel, loop to the next block as if we hit air!
+                    // This works for clipping, but not for partial transparency
+                    if (blockColor.a < 0.5) {
+                        continue;
+                    }
+                }
+                shadow = shadow * min(((dot(uvNormal, -float3(0, -1, -0.5)) + 1) / 2) + 0.1, 1);
+                blockColor *= shadow;
+            }
+            
+            // Update our output values for use in recursion
+            float3 hitNormal;
+            hitPoint = FindEntryPoint(rayOrigin, rayDir, worldPos, hitNormal);
+            hitReflection = reflect(rayDir, hitNormal);
+            
+            hitColor = blockColor;
+            // A hit was successful
+            return true;
+        }
+    }
+    // We hit the maximum raysteps without hitting the sky or a block
+    // This means we had an infinite loop or the world was bigger than our safety max
+    // To debug, return a very obvious yellow mask color
+    hitColor = float4(1.0,1.0,0,0);
+    // Do not reflect!
+    return false;
+}
+
+// Advances a ray origin into the world bounds with planar intersection / raytracing
+bool ClampRayOriginToBounds(inout float3 rayOrigin, float3 rayDir) {
+    int3 boundA = int3(0, 0, 0);
+    int3 boundB = int3(1, 1, 1) * ChunkSize * ChunkDomain;
+    // Only run this pass on rays that are outside the bounding box
+    // This should only happen when in the editor and using free camera
+    if (rayOrigin.x < 0 || rayOrigin.y < 0 || rayOrigin.z < 0 ||
+        rayOrigin.x >= boundB.x || rayOrigin.y >= boundB.y || rayOrigin.z >= boundB.z)
+    {
+        bool3 intersectsFace = bool3(0, 0, 0);
+        float3 boundDistance;
+        float3 projRay;
+        float3 scaleFactors;
+        // overstep rays by this margin to ensure they dont get improperly marked outside bounds
+        // Set to negative to see problem area where artifacts accrue
+        float precisionMargin = 0.0001;
+
+        boundDistance.x = (rayDir.x > 0 ? boundA.x : boundB.x) - rayOrigin.x;
+        scaleFactors.x = (boundDistance.x / rayDir.x) + precisionMargin;
+        // Make sure ray is traveling forward to hit the bound, else invalid
+        if (scaleFactors.x > 0) {
+            projRay = rayOrigin + rayDir * scaleFactors.x;
+            intersectsFace.x = (
+                projRay.y >= boundA.y && projRay.y < boundB.y &&
+                projRay.z >= boundA.z && projRay.z < boundB.z);
+        }
+
+        boundDistance.y = (rayDir.y > 0 ? boundA.y : boundB.y) - rayOrigin.y;
+        scaleFactors.y = (boundDistance.y / rayDir.y) + precisionMargin;
+        // Make sure ray is traveling forward to hit the bound, else invalid
+        if (scaleFactors.y > 0) {
+            projRay = rayOrigin + rayDir * scaleFactors.y;
+            intersectsFace.y = (
+                projRay.x >= boundA.x && projRay.x < boundB.x &&
+                projRay.z >= boundA.z && projRay.z < boundB.z);
+        }
+
+        boundDistance.z = (rayDir.z > 0 ? boundA.z : boundB.z) - rayOrigin.z;
+        scaleFactors.z = (boundDistance.z / rayDir.z) + precisionMargin;
+        // Make sure ray is traveling forward to hit the bound, else invalid
+        if (scaleFactors.z > 0) {
+            projRay = rayOrigin + rayDir * scaleFactors.z;
+            intersectsFace.z = (
+                projRay.y >= boundA.y && projRay.y < boundB.y &&
+                projRay.x >= boundA.x && projRay.x < boundB.x);
+        }
+
+        // If no intersection possible, just return a mask color in main function
+        if (!intersectsFace.x && !intersectsFace.y && !intersectsFace.z) {
+             return false; // MASK COLOR
+        }
+
+
+        // If the positions are out of bounds, warp to bounds
+        // If we are not inside the bounds, warp forward before deriving
+        float entryScale;
+        if (intersectsFace.x) {
+            entryScale = scaleFactors.x;
+        }
+        else if (intersectsFace.y) {
+            entryScale = scaleFactors.y;
+        }
+        else {
+            entryScale = scaleFactors.z;
+        }
+        // Advance our origin to the boundary edge then return valid
+        rayOrigin = rayOrigin + rayDir * entryScale;
+        return true;
+    }
+    else {
+        // If all boundaries are met already, do no clamping and return valid
+        return true;
+    }
+}
+
+// MAIN KERNEL
+[numthreads(8, 8, 1)]
+void CSMain(uint3 id : SV_DispatchThreadID)
+{
+    // Get screenspace UV
+    float xProgress = (id.x / ScreenResolutionX);
+    float yProgress = (id.y / ScreenResolutionY);
+
+    // Create a ray from base of eye
+    float3 rayOrigin = CameraPosition;
+    float3 rayDir = CameraForward;
+
+    // Add perspective
+    float aspectRatio = (ScreenResolutionX / ScreenResolutionY);
+    rayDir += CameraRight * (xProgress - 0.5) * aspectRatio;
+    rayDir += CameraUp * (yProgress - 0.5);
+
+    // Try to advance our ray into the world bounds, and record whether it was successful
+    bool hitBounds = ClampRayOriginToBounds(rayOrigin, rayDir);
+
+    // Mask out all rays that never intersect the AABB of the chunks. Used for freecam/editor, but rarely in a game setting
+    if (hitBounds == false) {
+            Result[id.xy] = float4(0.0, 0, 1.0, 1);
+            //Result[id.xy] =  skyColor*0.95; // mask color option
+            //Result[id.xy] = skyColor; // mask color option
+            return;
+    }
+
+    // Declare raymarching variables for recursive recording
+    float3 hitPoint;
+    float3 hitReflection;
+    float4 hitColor;
+    
+    // Keep a running sum of the color
+    float4 colorSum = float4(0.0, 0.0, 0.0, 0.0);
+    // The larger the current reflection count, the less color is contributed to the color sum
+    int reflectCount = 1;
+    // Only becomes false when a ray hits the sky. Used to terminate the loop
+    bool rayReflected = true;
+
+    // The first shot will always hit a color, even if its the sky
+    // This loop will run at least 1 time to achieve non-reflection cases
+    while (rayReflected && reflectCount < MaxReflects + 2) {
+        // Get a set of hit values and record whether this hit is a reflective surface (non-sky)
+        rayReflected = RayMarch(rayOrigin, rayDir, hitPoint, hitReflection, hitColor);
+
+        // For our first hit, the color will be opaque
+        if (reflectCount == 1) {
+            colorSum = hitColor;
+        }
+        // Following hits have a diminishing effect. Hit X has a contribution of 1/X
+        else {
+            colorSum += hitColor / reflectCount;
+            // Multiply the total sum by (X / X+1) to normalize to 0-1 color space
+            colorSum = colorSum * float(float(reflectCount) / (float(reflectCount) + 1));
+        }
+
+        // Update our origin ray values, thus freeing the hit parameters for any ensuing reflection
+        rayOrigin = hitPoint;
+        rayDir = hitReflection;
+        // Keep track of which reflection will be calculated next
+        reflectCount += 1;
+    }
+
+    // Apply our final pixel color value to the screen buffer. This will be applied to the Unity camera
+    Result[id.xy] = colorSum;
+}
