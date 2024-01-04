@@ -49,9 +49,15 @@ Compilation of the creation process with bloopers:
 
 ## Screenshots
 
-This is the peak performance of the renderer. Each block's color is calculated in the noise function.
+This is the peak performance of the renderer. Each block's color is calculated in the noise function, overwritten as flat color, or determined by texture.
 
 <img src="Screenshots/screenshot16.png" width="50%" height="auto"/>
+
+---
+
+Here is a view from inside a ravine when the reflection count is slowly incremented.
+
+<img src="Screenshots/reflection_iteration.gif" width="50%" height="auto"/>
 
 ---
 
@@ -60,6 +66,20 @@ Here are some example of recursive reflections. Two hills are repeatedly reflect
 <img src="Screenshots/mountain.gif" width="50%" height="auto"/>
 <img src="Screenshots/screenshot0.png" width="50%" height="auto"/>
 <img src="Screenshots/screenshot1.png" width="50%" height="auto"/>
+
+
+---
+
+Using the results of the intersection math, we can easily calculate UV's and apply a texture to the world. In this case, wooden planks.
+
+<img src="Screenshots/screenshot18.png" width="50%" height="auto"/>
+
+
+---
+
+Transparent textures can be used to achieve a wireframe effect. This is still very performant since DDA raymarching is ideal for dense voxel scenes.
+
+<img src="Screenshots/screenshot17.png" width="50%" height="auto"/>
 
 ---
 
@@ -88,8 +108,7 @@ This is after reflections are turned on to 1.
 
 ---
 
-This is after reflections are turned up to 100. You can see the noise generated makes the scene incomprehensible.  
-If you look closely on the left, you can see this entire screenshot is actually one block face closeup!  
+This is after reflections are turned up to 50. You can see the noise generated makes the scene incomprehensible.
 
 <img src="Screenshots/screenshot4.png" width="50%" height="auto"/>
 
@@ -110,6 +129,8 @@ Let's go back to the mountain scene. Up close, you can see reflections maintain 
 Viewing up from this ravine creates a stunning "rainbow sherbert" effect.
 
 <img src="Screenshots/screenshot10.png" width="50%" height="auto"/>
+
+<img src="Screenshots/screenshot19.png" width="50%" height="auto"/>
 
 ---
 
