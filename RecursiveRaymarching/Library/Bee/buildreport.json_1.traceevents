@@ -1,0 +1,553 @@
+{ "pid": 0, "tid": -1, "ph": "M", "name": "process_name", "args": { "name": "BeeDriver" } },
+{ "pid": 0, "tid": -1, "ph": "M", "name": "process_sort_index", "args": { "sort_index": "-2" } },
+{ "pid": 0, "tid": 1, "ph": "M", "name": "thread_name", "args": { "name": "" } },
+{ "pid": 0, "tid": 1, "ts": 1704410280373052, "dur": 1405292, "ph": "X", "name": "Build Player", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1704410280373256, "dur": 10048, "ph": "X", "name": "WriteBuildProgramData", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1704410280383306, "dur": 31292, "ph": "X", "name": "Run Backend", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1704410280414599, "dur": 579916, "ph": "X", "name": "BuildProgram", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1704410280994517, "dur": 770735, "ph": "X", "name": "Run Backend", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1704410281765253, "dur": 13090, "ph": "X", "name": "Finish", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1704410281778845, "dur": 10, "ph": "X", "name": "", "args": {} },
+{ "pid": 35942, "tid": -1, "ph": "M", "name": "process_name", "args": { "name": "netcorerun.dll" } },
+{ "pid": 35942, "tid": -1, "ph": "M", "name": "process_sort_index", "args": { "sort_index": "-1" } },
+{ "pid": 35942, "tid": 1, "ph": "M", "name": "thread_name", "args": { "name": "" } },
+{ "pid": 35942, "tid": 1, "ts": 1704410280847843, "dur": 124816, "ph": "X", "name": "BuildProgram", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1704410280848661, "dur": 33177, "ph": "X", "name": "BuildProgramContextConstructor", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1704410280959675, "dur": 3774, "ph": "X", "name": "OutputData.Write", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1704410280963452, "dur": 9199, "ph": "X", "name": "Backend.Write", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1704410280964021, "dur": 7945, "ph": "X", "name": "JsonToString", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1704410280976256, "dur": 1067, "ph": "X", "name": "", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1704410280975587, "dur": 1758, "ph": "X", "name": "Write chrome-trace events", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1704410281778935, "dur": 158, "ph": "X", "name": "buildprogram0.traceevents", "args": {} },
+{ "cat":"", "pid":12345, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"bee_backend" } }
+,{ "pid":12345, "tid":0, "ts":1704410281094913, "dur":1563, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704410281096484, "dur":38, "ph":"X", "name": "Tundra",  "args": { "detail":"RemoveStaleOutputs" }}
+,{ "pid":12345, "tid":0, "ts":1704410281096538, "dur":15, "ph":"X", "name": "Tundra",  "args": { "detail":"PrepareNodes" }}
+,{ "pid":12345, "tid":0, "ts":1704410281096555, "dur":351, "ph":"X", "name": "Tundra",  "args": { "detail":"BuildQueueInit" }}
+,{ "pid":12345, "tid":0, "ts":1704410281096926, "dur":511, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704410281097437, "dur":1, "ph":"X", "name": "SortWorkingStack",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704410281750256, "dur":239, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704410281750495, "dur":102, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704410281750597, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704410281750600, "dur":61, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704410281750661, "dur":29, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704410281750690, "dur":19, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704410281750709, "dur":21, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704410281750730, "dur":6, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704410281750736, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704410281750737, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704410281750742, "dur":0, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704410281750743, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704410281750747, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704410281750748, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704410281750752, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704410281750753, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704410281750757, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704410281750758, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704410281750763, "dur":0, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704410281750763, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704410281750767, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704410281750768, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704410281750773, "dur":0, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704410281750773, "dur":8, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704410281750781, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704410281750782, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704410281750786, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704410281750787, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704410281750791, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704410281750792, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704410281750797, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704410281750798, "dur":10, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704410281750808, "dur":0, "ph":"X", "name": "SharedResourceDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704410281750833, "dur":2, "ph":"X", "name": "BuildQueueDestroyTail",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704410281750850, "dur":1168, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
+,{ "pid":12345, "tid":1, "ts":1704410281097196, "dur":249, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1704410281097448, "dur":3821, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1704410281101282, "dur":1, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"WriteText Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1704410281101285, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1704410281102326, "dur":383, "ph":"X", "name": "WriteText",  "args": { "detail":"Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1704410281102711, "dur":48, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1704410281102761, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1704410281102903, "dur":4181, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1704410281107091, "dur":194, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":1, "ts":1704410281107315, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1704410281107724, "dur":3066, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":1, "ts":1704410281110845, "dur":92701, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":1, "ts":1704410281203556, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1704410281203936, "dur":2156, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":1, "ts":1704410281206146, "dur":24037, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1704410281230188, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1704410281230199, "dur":1503, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1704410281231757, "dur":46370, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1704410281278138, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1704410281278152, "dur":3248, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1704410281281453, "dur":29410, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1704410281310866, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1704410281310875, "dur":2853, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1704410281313789, "dur":40787, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1704410281354580, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1704410281354588, "dur":2530, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1704410281357163, "dur":1329, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/Unity.Services.Core.Environments.dll" }}
+,{ "pid":12345, "tid":1, "ts":1704410281358498, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1704410281358510, "dur":14775, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/Unity.Services.Core.Environments.dll" }}
+,{ "pid":12345, "tid":1, "ts":1704410281373336, "dur":31085, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/Unity.Services.Core.Analytics.dll" }}
+,{ "pid":12345, "tid":1, "ts":1704410281404426, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1704410281404448, "dur":1733, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/Unity.Services.Core.Analytics.dll" }}
+,{ "pid":12345, "tid":1, "ts":1704410281406226, "dur":158966, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":1, "ts":1704410281565200, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1704410281565213, "dur":3843, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":1, "ts":1704410281569104, "dur":158, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/StreamingAssets/UnityServicesProjectConfiguration.json" }}
+,{ "pid":12345, "tid":1, "ts":1704410281569265, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1704410281576897, "dur":1268, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/StreamingAssets/UnityServicesProjectConfiguration.json" }}
+,{ "pid":12345, "tid":1, "ts":1704410281578209, "dur":42, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":1, "ts":1704410281578254, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1704410281578331, "dur":1255, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":1, "ts":1704410281579630, "dur":43, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":1, "ts":1704410281579676, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1704410281579709, "dur":944, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":1, "ts":1704410281580694, "dur":41, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":1, "ts":1704410281580738, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1704410281580751, "dur":841, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":1, "ts":1704410281581633, "dur":148, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":1, "ts":1704410281581784, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1704410281581792, "dur":1732, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":1, "ts":1704410281583580, "dur":8825, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":1, "ts":1704410281592411, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1704410281592425, "dur":1195, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":1, "ts":1704410281593664, "dur":156599, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1704410281097274, "dur":190, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1704410281097464, "dur":3812, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1704410281101282, "dur":192, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":2, "ts":1704410281101476, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1704410281110240, "dur":13608, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":2, "ts":1704410281123881, "dur":388, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching.exe" }}
+,{ "pid":12345, "tid":2, "ts":1704410281124272, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1704410281124277, "dur":11928, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching.exe" }}
+,{ "pid":12345, "tid":2, "ts":1704410281136254, "dur":102326, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1704410281238590, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1704410281238603, "dur":1481, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1704410281240135, "dur":22821, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1704410281262963, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1704410281262975, "dur":1606, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1704410281264646, "dur":22119, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1704410281286768, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1704410281286775, "dur":1563, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1704410281288385, "dur":22497, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1704410281310886, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1704410281310892, "dur":4030, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1704410281314965, "dur":149481, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1704410281464450, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1704410281464457, "dur":6330, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1704410281470838, "dur":189650, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":2, "ts":1704410281660491, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1704410281660496, "dur":16180, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":2, "ts":1704410281676723, "dur":73574, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1704410281097334, "dur":152, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1704410281097486, "dur":3820, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1704410281101306, "dur":9362, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":3, "ts":1704410281110672, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1704410281110688, "dur":10556, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":3, "ts":1704410281121275, "dur":343412, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":3, "ts":1704410281464690, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1704410281464696, "dur":12538, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":3, "ts":1704410281477296, "dur":123582, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":3, "ts":1704410281600884, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1704410281600895, "dur":1417, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":3, "ts":1704410281602365, "dur":147885, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1704410281097222, "dur":229, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1704410281097451, "dur":3828, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1704410281101282, "dur":154, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":4, "ts":1704410281101439, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1704410281107761, "dur":24499, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":4, "ts":1704410281132307, "dur":26153, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1704410281158463, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1704410281158468, "dur":2747, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1704410281161286, "dur":57766, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1704410281219056, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1704410281219063, "dur":1200, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1704410281220302, "dur":19825, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1704410281240132, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1704410281240141, "dur":1483, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1704410281241684, "dur":38116, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1704410281279806, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1704410281279817, "dur":2071, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1704410281281930, "dur":24489, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1704410281306425, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1704410281306436, "dur":1762, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1704410281308246, "dur":43351, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1704410281351602, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1704410281351611, "dur":1499, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1704410281353152, "dur":77196, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/Unity.Services.Core.Internal.dll" }}
+,{ "pid":12345, "tid":4, "ts":1704410281430354, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1704410281430364, "dur":8917, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/Unity.Services.Core.Internal.dll" }}
+,{ "pid":12345, "tid":4, "ts":1704410281439327, "dur":220855, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":4, "ts":1704410281660186, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1704410281660194, "dur":15709, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":4, "ts":1704410281675951, "dur":74308, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1704410281097260, "dur":197, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1704410281097457, "dur":3820, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1704410281101282, "dur":11532, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":5, "ts":1704410281112819, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1704410281112834, "dur":19697, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":5, "ts":1704410281132573, "dur":39713, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1704410281172291, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1704410281172302, "dur":1802, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1704410281174150, "dur":32885, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1704410281207038, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1704410281207045, "dur":2741, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1704410281209840, "dur":38951, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1704410281248798, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1704410281248810, "dur":1488, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1704410281250347, "dur":23254, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1704410281273608, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1704410281273620, "dur":1485, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1704410281275154, "dur":22667, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1704410281297827, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1704410281297838, "dur":1123, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1704410281299005, "dur":23077, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1704410281322087, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1704410281322098, "dur":1369, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1704410281323515, "dur":101440, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":5, "ts":1704410281424962, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1704410281424974, "dur":2823, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":5, "ts":1704410281427845, "dur":102196, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":5, "ts":1704410281530047, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1704410281530058, "dur":5258, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":5, "ts":1704410281535360, "dur":61780, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":5, "ts":1704410281597150, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1704410281597166, "dur":1477, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":5, "ts":1704410281598697, "dur":151564, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1704410281097295, "dur":174, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1704410281097469, "dur":3830, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1704410281101300, "dur":266, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":6, "ts":1704410281101570, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1704410281110223, "dur":25690, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":6, "ts":1704410281135969, "dur":22126, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1704410281158100, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1704410281158254, "dur":2514, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1704410281160820, "dur":23475, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1704410281184300, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1704410281184309, "dur":2318, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1704410281186666, "dur":42248, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1704410281228919, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1704410281228929, "dur":2780, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1704410281232019, "dur":20504, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1704410281252528, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1704410281252535, "dur":6534, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1704410281259112, "dur":93639, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1704410281352755, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1704410281352763, "dur":1481, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1704410281354288, "dur":764, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/Unity.Services.Core.Environments.Internal.dll" }}
+,{ "pid":12345, "tid":6, "ts":1704410281355056, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1704410281355064, "dur":10299, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/Unity.Services.Core.Environments.Internal.dll" }}
+,{ "pid":12345, "tid":6, "ts":1704410281365419, "dur":45306, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/Unity.Services.Core.dll" }}
+,{ "pid":12345, "tid":6, "ts":1704410281410733, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1704410281410858, "dur":4391, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/Unity.Services.Core.dll" }}
+,{ "pid":12345, "tid":6, "ts":1704410281415299, "dur":88918, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":6, "ts":1704410281504221, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1704410281504231, "dur":4182, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":6, "ts":1704410281508466, "dur":239551, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":6, "ts":1704410281748023, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1704410281748031, "dur":2139, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":6, "ts":1704410281750203, "dur":2, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"Player" }}
+,{ "pid":12345, "tid":6, "ts":1704410281750206, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1704410281097327, "dur":152, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1704410281097479, "dur":3823, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1704410281101303, "dur":303, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":7, "ts":1704410281101609, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1704410281110457, "dur":19169, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":7, "ts":1704410281129662, "dur":66129, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1704410281195795, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1704410281195804, "dur":2494, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1704410281198346, "dur":43317, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1704410281241667, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1704410281241677, "dur":1109, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1704410281242841, "dur":47619, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1704410281290468, "dur":43, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1704410281290523, "dur":2317, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1704410281292887, "dur":21613, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1704410281314505, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1704410281314516, "dur":2045, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1704410281316613, "dur":29223, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1704410281345839, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1704410281345848, "dur":1812, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1704410281347794, "dur":50022, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/Unity.Services.Core.Registration.dll" }}
+,{ "pid":12345, "tid":7, "ts":1704410281397824, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1704410281397836, "dur":2272, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/Unity.Services.Core.Registration.dll" }}
+,{ "pid":12345, "tid":7, "ts":1704410281400159, "dur":114130, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":7, "ts":1704410281514295, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1704410281514308, "dur":2177, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":7, "ts":1704410281516533, "dur":167838, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":7, "ts":1704410281684377, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1704410281684386, "dur":1052, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":7, "ts":1704410281685472, "dur":64812, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1704410281097359, "dur":133, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1704410281097492, "dur":3815, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1704410281101307, "dur":464, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":8, "ts":1704410281101775, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1704410281105201, "dur":1899, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":8, "ts":1704410281107178, "dur":116, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":8, "ts":1704410281107321, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1704410281107689, "dur":13275, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":8, "ts":1704410281121021, "dur":130248, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":8, "ts":1704410281251273, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1704410281251357, "dur":4705, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":8, "ts":1704410281256122, "dur":24255, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1704410281280381, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1704410281280389, "dur":1515, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1704410281281951, "dur":60158, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1704410281342116, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1704410281342129, "dur":1166, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1704410281343349, "dur":1164, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/Unity.Services.Core.Threading.dll" }}
+,{ "pid":12345, "tid":8, "ts":1704410281344517, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1704410281344526, "dur":1045, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/Unity.Services.Core.Threading.dll" }}
+,{ "pid":12345, "tid":8, "ts":1704410281345615, "dur":29404, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/Unity.Services.Core.Scheduler.dll" }}
+,{ "pid":12345, "tid":8, "ts":1704410281375023, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1704410281375033, "dur":6307, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/Unity.Services.Core.Scheduler.dll" }}
+,{ "pid":12345, "tid":8, "ts":1704410281381383, "dur":254551, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":8, "ts":1704410281635939, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1704410281635947, "dur":103099, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":8, "ts":1704410281739079, "dur":11181, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1704410281097395, "dur":105, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1704410281097500, "dur":3807, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1704410281101308, "dur":11536, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":9, "ts":1704410281112848, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1704410281112861, "dur":8582, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":9, "ts":1704410281121474, "dur":105238, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":9, "ts":1704410281226717, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1704410281226724, "dur":2370, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":9, "ts":1704410281229144, "dur":20303, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1704410281249475, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1704410281249483, "dur":1189, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1704410281250710, "dur":52347, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1704410281303065, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1704410281303079, "dur":7122, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1704410281310251, "dur":32646, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1704410281342903, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1704410281342912, "dur":911, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1704410281343864, "dur":58953, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/Unity.Services.Core.Telemetry.dll" }}
+,{ "pid":12345, "tid":9, "ts":1704410281402824, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1704410281402836, "dur":1406, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/Unity.Services.Core.Telemetry.dll" }}
+,{ "pid":12345, "tid":9, "ts":1704410281404290, "dur":180492, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":9, "ts":1704410281584790, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1704410281584802, "dur":1428, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":9, "ts":1704410281586276, "dur":46, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/level0.resS" }}
+,{ "pid":12345, "tid":9, "ts":1704410281586325, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1704410281586332, "dur":1015, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/level0.resS" }}
+,{ "pid":12345, "tid":9, "ts":1704410281587385, "dur":40, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/level0" }}
+,{ "pid":12345, "tid":9, "ts":1704410281587428, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1704410281587435, "dur":827, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/level0" }}
+,{ "pid":12345, "tid":9, "ts":1704410281588301, "dur":46, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":9, "ts":1704410281588424, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1704410281588432, "dur":1061, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":9, "ts":1704410281589535, "dur":51, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":9, "ts":1704410281589589, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1704410281589596, "dur":1020, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":9, "ts":1704410281590663, "dur":159590, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1704410281097426, "dur":79, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1704410281097505, "dur":3792, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1704410281101297, "dur":149, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":10, "ts":1704410281101450, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1704410281110170, "dur":25479, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":10, "ts":1704410281135708, "dur":38212, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1704410281173925, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1704410281173934, "dur":1463, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1704410281175449, "dur":147204, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":10, "ts":1704410281322656, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1704410281322664, "dur":988, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":10, "ts":1704410281323695, "dur":67326, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
+,{ "pid":12345, "tid":10, "ts":1704410281391031, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1704410281391045, "dur":1327, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
+,{ "pid":12345, "tid":10, "ts":1704410281392418, "dur":72170, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":10, "ts":1704410281464592, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1704410281464599, "dur":4323, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":10, "ts":1704410281468977, "dur":150244, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":10, "ts":1704410281619230, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1704410281619243, "dur":56756, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":10, "ts":1704410281676044, "dur":74225, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1704410281097461, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1704410281097461, "dur":3837, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1704410281101298, "dur":11610, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":11, "ts":1704410281112911, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1704410281122088, "dur":13794, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":11, "ts":1704410281135936, "dur":35775, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1704410281171719, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1704410281171732, "dur":1275, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1704410281173056, "dur":21119, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1704410281194181, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1704410281194193, "dur":1432, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1704410281195671, "dur":90961, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1704410281286636, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1704410281286647, "dur":1616, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1704410281288313, "dur":24091, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1704410281312409, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1704410281312419, "dur":2927, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1704410281315387, "dur":35468, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1704410281350863, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1704410281350874, "dur":1769, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1704410281352690, "dur":2434, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/Unity.Services.Core.Networking.dll" }}
+,{ "pid":12345, "tid":11, "ts":1704410281355128, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1704410281355135, "dur":10287, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/Unity.Services.Core.Networking.dll" }}
+,{ "pid":12345, "tid":11, "ts":1704410281365474, "dur":1031, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/Unity.Services.Core.Device.dll" }}
+,{ "pid":12345, "tid":11, "ts":1704410281366510, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1704410281366520, "dur":975, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/Unity.Services.Core.Device.dll" }}
+,{ "pid":12345, "tid":11, "ts":1704410281367536, "dur":38371, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/Unity.Services.Core.Configuration.dll" }}
+,{ "pid":12345, "tid":11, "ts":1704410281405915, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1704410281405928, "dur":6069, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/Unity.Services.Core.Configuration.dll" }}
+,{ "pid":12345, "tid":11, "ts":1704410281412042, "dur":89362, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":11, "ts":1704410281501411, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1704410281501422, "dur":2752, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":11, "ts":1704410281504226, "dur":155574, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":11, "ts":1704410281659805, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1704410281659815, "dur":15982, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":11, "ts":1704410281675872, "dur":74393, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1704410281097481, "dur":1, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1704410281097482, "dur":3793, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1704410281101282, "dur":33516, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":12, "ts":1704410281134804, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1704410281135333, "dur":1581, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":12, "ts":1704410281136969, "dur":21023, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1704410281158003, "dur":6, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1704410281158261, "dur":2949, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1704410281161257, "dur":21367, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1704410281182632, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1704410281182646, "dur":2766, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1704410281185474, "dur":21161, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1704410281206640, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1704410281206650, "dur":1304, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1704410281207998, "dur":49730, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1704410281257733, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1704410281257757, "dur":1019, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1704410281258817, "dur":35788, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1704410281294612, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1704410281294623, "dur":1975, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1704410281296643, "dur":21429, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1704410281318079, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1704410281318092, "dur":1057, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1704410281319191, "dur":55012, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":12, "ts":1704410281374208, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1704410281374218, "dur":1062, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":12, "ts":1704410281375324, "dur":103638, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":12, "ts":1704410281478968, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1704410281478978, "dur":2063, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":12, "ts":1704410281481088, "dur":125262, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":12, "ts":1704410281606357, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1704410281606368, "dur":68122, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":12, "ts":1704410281674532, "dur":75748, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1704410281097513, "dur":1, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1704410281097514, "dur":3778, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1704410281101292, "dur":9375, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":13, "ts":1704410281110671, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1704410281122078, "dur":13723, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":13, "ts":1704410281135866, "dur":22909, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1704410281158779, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1704410281158785, "dur":3414, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1704410281162252, "dur":68134, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1704410281230390, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1704410281230417, "dur":2042, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1704410281232502, "dur":19144, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1704410281251651, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1704410281251659, "dur":2989, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1704410281254699, "dur":36591, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1704410281291294, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1704410281291303, "dur":1508, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1704410281292859, "dur":120496, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1704410281413360, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1704410281413371, "dur":2890, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1704410281416314, "dur":47602, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":13, "ts":1704410281463923, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1704410281463935, "dur":1470, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":13, "ts":1704410281465456, "dur":258145, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":13, "ts":1704410281723606, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1704410281723613, "dur":1498, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":13, "ts":1704410281725139, "dur":25128, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1704410281097542, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1704410281097542, "dur":3747, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1704410281101303, "dur":284, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":14, "ts":1704410281101591, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1704410281110502, "dur":19171, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":14, "ts":1704410281129705, "dur":21943, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1704410281151653, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1704410281151950, "dur":956, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1704410281152953, "dur":19680, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1704410281172638, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1704410281172648, "dur":2579, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1704410281175427, "dur":155690, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1704410281331121, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1704410281331128, "dur":5988, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1704410281337173, "dur":248117, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":14, "ts":1704410281585294, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1704410281585303, "dur":4215, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":14, "ts":1704410281589572, "dur":147, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/boot.config" }}
+,{ "pid":12345, "tid":14, "ts":1704410281589722, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1704410281589727, "dur":1188, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/boot.config" }}
+,{ "pid":12345, "tid":14, "ts":1704410281590953, "dur":159298, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1704410281097573, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1704410281097573, "dur":3712, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1704410281101288, "dur":145, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":15, "ts":1704410281101436, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1704410281105219, "dur":5290, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":15, "ts":1704410281110610, "dur":131, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":15, "ts":1704410281110749, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1704410281110756, "dur":15804, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":15, "ts":1704410281126594, "dur":99, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":15, "ts":1704410281126695, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1704410281135852, "dur":15231, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":15, "ts":1704410281151140, "dur":31963, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1704410281183108, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1704410281183116, "dur":3446, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1704410281186614, "dur":39241, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1704410281225863, "dur":5, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1704410281225879, "dur":2415, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1704410281228339, "dur":23159, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1704410281251502, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1704410281251510, "dur":5123, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1704410281256680, "dur":28188, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1704410281284873, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1704410281284882, "dur":1372, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1704410281286292, "dur":33279, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":15, "ts":1704410281319574, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1704410281319583, "dur":2144, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":15, "ts":1704410281322124, "dur":108875, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":15, "ts":1704410281431003, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1704410281431010, "dur":10618, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":15, "ts":1704410281441676, "dur":205801, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":15, "ts":1704410281647482, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1704410281647490, "dur":29775, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":15, "ts":1704410281677296, "dur":72980, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1704410281097598, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1704410281097598, "dur":3683, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1704410281101284, "dur":11635, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":16, "ts":1704410281112940, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1704410281112951, "dur":19589, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":16, "ts":1704410281132579, "dur":40539, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1704410281173122, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1704410281173130, "dur":2199, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1704410281175376, "dur":43321, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1704410281218706, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1704410281218717, "dur":1381, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1704410281220144, "dur":31683, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1704410281251831, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1704410281251838, "dur":5295, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1704410281257182, "dur":26714, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1704410281283903, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1704410281283917, "dur":1727, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1704410281285691, "dur":24540, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1704410281310236, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1704410281310245, "dur":1370, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1704410281311659, "dur":19094, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1704410281330761, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1704410281330780, "dur":1183, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1704410281332009, "dur":90057, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":16, "ts":1704410281422073, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1704410281422107, "dur":14423, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":16, "ts":1704410281436576, "dur":46570, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":16, "ts":1704410281483154, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1704410281483166, "dur":1176, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":16, "ts":1704410281484386, "dur":241038, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/Newtonsoft.Json.dll" }}
+,{ "pid":12345, "tid":16, "ts":1704410281725427, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1704410281725436, "dur":930, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Charles/Desktop/ReflectiveRaymarchingBuild/Reflective Raymarching_Data/Managed/Newtonsoft.Json.dll" }}
+,{ "pid":12345, "tid":16, "ts":1704410281726395, "dur":23879, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704410281753103, "dur":1489, "ph":"X", "name": "ProfilerWriteOutput" }
+,{ "pid": 0, "tid": 1, "ts": 1704410281779144, "dur": 505, "ph": "X", "name": "backend_profiler1.traceevents", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1704410281778833, "dur": 831, "ph": "X", "name": "Write chrome-trace events", "args": {} },
