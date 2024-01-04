@@ -130,13 +130,11 @@ Viewing up from this ravine creates a stunning "rainbow sherbert" effect.
 
 <img src="Screenshots/screenshot10.png" width="50%" height="auto"/>
 
-<img src="Screenshots/screenshot19.png" width="50%" height="auto"/>
-
 ---
 
-Using white blocks with shadows makes the entire scene appear as one big mirror.
+If we want a less psychedelic effect, applying a texture creates beautiful silhouettes.
 
-<img src="Screenshots/screenshot15.png" width="50%" height="auto"/>
+<img src="Screenshots/screenshot19.png" width="50%" height="auto"/>
 
 ## Code Highlights
 
