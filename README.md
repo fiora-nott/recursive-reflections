@@ -37,7 +37,7 @@ The final result is an algorithm that can render a complicated volume of 134,217
 
 Footage of the completed application running various scenes:
 
-▶️ [Demonstration <3:31>](https://youtu.be/UM7M4-LG8Kc)
+▶️ [Demonstration <5:19>](https://youtu.be/oAfIFJsU2HM)
 
 <!--
 ---
@@ -138,16 +138,173 @@ If we want a less psychedelic effect, applying a texture creates beautiful silho
 
 ## Code Highlights
 
-<!--
-Vertex Shader (PerspectiveBinaryMem.shader):
+
+Main Shader Kernel (ChunkTracer4.compute):
+
+```hlsl
+// MAIN KERNEL
+[numthreads(8, 8, 1)]
+void CSMain(uint3 id : SV_DispatchThreadID)
+{
+    // Get screenspace UV
+    float xProgress = (id.x / ScreenResolutionX);
+    float yProgress = (id.y / ScreenResolutionY);
+
+    // Create a ray from base of eye
+    float3 rayOrigin = CameraPosition;
+    float3 rayDir = CameraForward;
+
+    // Add perspective
+    float aspectRatio = (ScreenResolutionX / ScreenResolutionY);
+    rayDir += CameraRight * (xProgress - 0.5) * aspectRatio;
+    rayDir += CameraUp * (yProgress - 0.5);
+
+    // Try to advance our ray into the world bounds, and record whether it was successful
+    bool hitBounds = ClampRayOriginToBounds(rayOrigin, rayDir);
+
+    // Mask out all rays that never intersect the AABB of the chunks. Used for freecam/editor, but rarely in a game setting
+    if (hitBounds == false) {
+            Result[id.xy] = float4(0.0, 0, 1.0, 1);
+            //Result[id.xy] =  skyColor*0.95; // mask color option
+            //Result[id.xy] = skyColor; // mask color option
+            return;
+    }
+
+    // Declare raymarching variables for recursive recording
+    float3 hitPoint;
+    float3 hitReflection;
+    float4 hitColor;
+    
+    // Keep a running sum of the color
+    float4 colorSum = float4(0.0, 0.0, 0.0, 0.0);
+    // The larger the current reflection count, the less color is contributed to the color sum
+    int reflectCount = 1;
+    // Only becomes false when a ray hits the sky. Used to terminate the loop
+    bool rayReflected = true;
+
+    // The first shot will always hit a color, even if its the sky
+    // This loop will run at least 1 time to achieve non-reflection cases
+    while (rayReflected && reflectCount < MaxReflects + 2) {
+        // Get a set of hit values and record whether this hit is a reflective surface (non-sky)
+        rayReflected = RayMarch(rayOrigin, rayDir, hitPoint, hitReflection, hitColor);
+
+        // For our first hit, the color will be opaque
+        if (reflectCount == 1) {
+            colorSum = hitColor;
+        }
+        // Following hits have a diminishing effect. Hit X has a contribution of 1/X
+        else {
+            colorSum += hitColor / reflectCount;
+            // Multiply the total sum by (X / X+1) to normalize to 0-1 color space
+            colorSum = colorSum * float(float(reflectCount) / (float(reflectCount) + 1));
+        }
+
+        // Update our origin ray values, thus freeing the hit parameters for any ensuing reflection
+        rayOrigin = hitPoint;
+        rayDir = hitReflection;
+        // Keep track of which reflection will be calculated next
+        reflectCount += 1;
+    }
+
+    // Apply our final pixel color value to the screen buffer. This will be applied to the Unity camera
+    Result[id.xy] = colorSum;
+}
+```
+
+Ray Marching Function (ChunkTracer4.compute):
 
 ```hlsl
 
+// Continually step a blockposition using DDA until a block is hit, then return hit values including albedo/texture
+bool RayMarch(float3 rayOrigin, float3 rayDir, out float3 hitPoint, out float3 hitReflection, out float4 hitColor) {
+
+    // Worldpos represents a cartesian coordinate value
+    int3 worldPos = floor(rayOrigin);
+    // Chunkpos represents a chunkwise coordinate where 1 unit represents 1 chunk's width 
+    int3 chunkPos;
+    // Blockpos represents which local block coordinate the worldpos inhabits.
+    // This will be in a range of (0, chunkSize-1) inclusive. This is required for flattened array indexing 
+    int3 blockPos;
+
+    // Limit iterations of raystepping to avoid infinite loops or impossibly large world traversal
+    int steps = 0;
+    while (steps < 2000) {
+        steps++;
+        
+        // Advance the world position because it is in the same coordinate system as rayOrigin and Direction
+        worldPos = DDA_OneUnit(rayOrigin, rayDir, worldPos);
+        // Derive the chunkspace coordinate and blockspace coordinate for indexing arrays
+        chunkPos = floor(worldPos / ChunkSize);
+        blockPos = floor(worldPos) - chunkPos * ChunkSize;
+
+        if (!PositionInBounds(worldPos)) {
+            // Calculate the sky color for every ray - even reflections
+            // This means the sky color itself can be carried through reflections
+            hitColor = CalculateSkyColor(rayDir);
+            return false;
+        }
+
+        // Sample our block memory to get an RGBA value!
+        float4 blockColor = GetBlock(blockPos, chunkPos);
+
+        // The alpha channel determines whether or not a block is solid
+        if (blockColor.a > 0.5) {
+            // Our calling script may want to overwrite block colors and textures
+            if (OverwriteColor == 1) {
+                blockColor = OverwriteValue;
+            }
+
+            // Simple dot product shadows can be applied depending on which planar normal we hit
+            if (ShadowsOn == 1) {
+                float shadow = 1;
+                float3 uvNormal;
+                float3 UVhit = FindEntryPoint(rayOrigin, rayDir, worldPos, uvNormal);
+
+                // Use our UV intersection to sample a blocktexture
+                if (BlockTextureOn) {
+                    float2 UV;
+                    // For horizontal faces
+                    if (uvNormal.y == 0) {
+                        // Y is always the vertical
+                        UV.y = UVhit.y - worldPos.y;
+                        // For z-faces, x is the cross product
+                        if (uvNormal.z != 0)
+                            UV.x = UVhit.x - worldPos.x;
+                        // For x-faces, z is the cross product
+                        else
+                            UV.x = UVhit.z - worldPos.z;
+                    }
+                    else {
+                        // for y-faces, use horizontals as UV
+                        UV.x = UVhit.x - worldPos.x;
+                        UV.y = UVhit.z - worldPos.z;
+                    }
+                    blockColor = BlockTexture.SampleLevel(samplerBlockTexture, UV * TextureDownscale, 0);
+                    // If we hit a transparent pixel, loop to the next block as if we hit air!
+                    // This works for clipping, but not for partial transparency
+                    if (blockColor.a < 0.5) {
+                        continue;
+                    }
+                }
+                shadow = shadow * min(((dot(uvNormal, -float3(0, -1, -0.5)) + 1) / 2) + 0.1, 1);
+                blockColor *= shadow;
+            }
+            
+            // Update our output values for use in recursion
+            float3 hitNormal;
+            hitPoint = FindEntryPoint(rayOrigin, rayDir, worldPos, hitNormal);
+            hitReflection = reflect(rayDir, hitNormal);
+            
+            hitColor = blockColor;
+            // A hit was successful
+            return true;
+        }
+    }
+    // We hit the maximum raysteps without hitting the sky or a block
+    // This means we had an infinite loop or the world was bigger than our safety max
+    // To debug, return a very obvious yellow mask color
+    hitColor = float4(1.0,1.0,0,0);
+    // Do not reflect!
+    return false;
+}
 ```
-
-Meshing Algorithm (ChunkMesher.cpp):
-```hlsl
-
-```
-
--->
