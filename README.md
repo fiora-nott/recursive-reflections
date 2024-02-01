@@ -28,7 +28,7 @@ The final result is an algorithm that can render a complicated volume of 134,217
 ## Takeaways
 - Function parameters can become extremely complicated in HLSL if you do not abstract your variables
 - DDA for voxels can introduce severe artifacts. Stepping in block-space prevents gaps forming at edges/corners
-- Raymarching requires enormous video memory if you want O(n) block accesses
+- Raymarching requires enormous video memory if you want O(1) block accesses
 - Debugging visual glitches in a mature shader requires an intense and thorough process, often with creative color coding
 - Instead of using HLSL to draft, plan out all of the expected behaviour on paper before writing code
 - Reflections past 2-3 begin losing coherence and introducing noise. Refraction or blurring may solve this
